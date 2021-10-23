@@ -1,0 +1,27 @@
+export default {
+  queryRouteList: '/routes',
+
+  queryUserInfo: '/user/getUserInfo',
+  logoutUser: '/user/logout',
+  loginUser: 'POST /user/login',
+
+  // queryUser: '/user/:id',
+  queryUserList: '/user/getUserList',
+  updateUser: 'POST /user/updateUser',
+  createUser: 'POST /user/createUser',
+  removeUser: 'POST /user/removeUser',
+  queryPostList: '/topic/getTopicList',
+  createPost: 'POST /topic/createTopic',
+  updatePost: 'PATCH /topic/updateTopic',
+  removePost: 'POST /topic/removeTopic',
+  queryCategoryList: '/category/getCategoryList',
+  createCategory: 'POST /category/createCategory',
+  updateCategory: 'PATCH /category/updateCategory',
+  removeCategory: 'POST /category/removeCategory',
+  queryCommentList: '/comment/getCommentList',
+  removeComment: 'POST /comment/removeComment',
+  queryRoleList: '/role/getRoleList',
+  createRole: 'POST /role/createRole',
+  updateRole: 'PATCH /role/updateRole',
+  removeRole: 'POST /role/removeRole',
+}

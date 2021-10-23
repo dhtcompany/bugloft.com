@@ -1,0 +1,40 @@
+{
+  "name": "bugloft-api",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon index.js --inspect",
+    "start": "pm2 start pm2.config.json"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "cookie-parser": "~1.4.4",
+    "express": "~4.16.1",
+    "koa-proxies": "^0.12.1",
+    "mongoose": "^5.0.11",
+    "nodemon": "^1.17.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-transform-async-to-generator": "^7.5.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "@babel/register": "^7.4.4",
+    "connect-mongo": "^2.0.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express-session": "^1.16.1",
+    "formidable": "^1.2.1",
+    "import-dir": "0.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-jwt": "^3.6.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "nodemon": "^1.18.6",
+    "pm2": "^3.5.1"
+  }
+}
