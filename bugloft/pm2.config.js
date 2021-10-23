@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'flowforum',
+      name: 'bugloft',
       script: './server.js',
       cwd: './', // current workspace
       watch: [
