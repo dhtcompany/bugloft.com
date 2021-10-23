@@ -19,7 +19,7 @@ const Register: NextPage<{}> = () => {
     fieldsValue.password = md5(fieldsValue.password)
     const data = await userRegister(fieldsValue);
     if (data.success) {
-      message.success('Registered successfully, welcome to Flow.io forum');
+      message.success('Registered successfully, welcome to Bugloft');
       Router.push('/login');
     }
   }

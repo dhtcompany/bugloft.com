@@ -118,7 +118,7 @@ module.exports = withTypescript(
       serverRuntimeConfig: {
         // Will only be available on the server side
         rootDir: path.join(__dirname, './'),
-        PORT: isDev ? 3006 : process.env.PORT || 3006,
+        PORT: process.env.PORT || 3006,
       },
       publicRuntimeConfig: {
         // Will be available on both server and client
