@@ -24,6 +24,22 @@ const NextApp: NextPage<NextContext> = (props) => {
           <meta charSet='utf-8' />
           <title>Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống</title>
           <link rel='shortcut icon' href='/static/favicon.ico' type='image/ico' />
+
+          <title>Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống</title>
+          <meta name="title" content="Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống" />
+          <meta name="description" content="Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống: văn hóa, kinh tế, sản phẩm, công nghệ, loại hình giải trí ... Đánh giá khách quan nhằm hổ trợ người dùng thông tin trc khi tiếp cận thực tế." />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://bugloft.com/" />
+          <meta property="og:title" content="Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống" />
+          <meta property="og:description" content="Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống: văn hóa, kinh tế, sản phẩm, công nghệ, loại hình giải trí ... Đánh giá khách quan nhằm hổ trợ người dùng thông tin trc khi tiếp cận thực tế." />
+          <meta property="og:image" content="https://bugloft.com/images/imgsseo.jpg" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://bugloft.com/" />
+          <meta property="twitter:title" content="Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống" />
+          <meta property="twitter:description" content="Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống: văn hóa, kinh tế, sản phẩm, công nghệ, loại hình giải trí ... Đánh giá khách quan nhằm hổ trợ người dùng thông tin trc khi tiếp cận thực tế." />
+          <meta property="twitter:image" content="https://bugloft.com/images/imgsseo.jpg" />
         </Head>
         <PageSeo />
         <NoLayout>

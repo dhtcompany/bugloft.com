@@ -14,7 +14,7 @@ const { CancelToken } = axios
 window.cancelRequest = new Map()
 
 export default function request(options) {
-  options.withCredentials = true
+  // options.withCredentials = true;
   let { data, url, method = 'get' } = options
   const cloneData = cloneDeep(data)
 

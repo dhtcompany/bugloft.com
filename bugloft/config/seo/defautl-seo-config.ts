@@ -33,7 +33,7 @@ const additionalMetaTags: Array<MetaTag> = [
         content: 'bugloft.com'
     }, {
         name: 'image',
-        content: 'https://bugloft.com/images/seo.png'
+        content: 'https://bugloft.com/images/imgsseo.jpg'
     }];
 
 const additionalLinkTags: Array<any> = [
@@ -111,7 +111,7 @@ export const DEFAULT_OTHER_META_TAGS = [
         content: 'Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống'
     }, {
         itemprop: 'image',
-        content: 'https://bugloft.com/images/seo.png'
+        content: 'https://bugloft.com/images/imgsseo.jpg'
     },
     {
         httpEquiv: 'cache-control',
