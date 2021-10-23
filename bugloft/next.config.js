@@ -98,7 +98,7 @@ module.exports = withTypescript(
             ...[
               new DefinePlugin({
                 'process.env': {
-                  BASE_URL: JSON.stringify('http://localhost:9009'),
+                  BASE_URL: JSON.stringify('https://api.bugloft.com'),
                 },
               }),
             ],

@@ -1,7 +1,7 @@
 import { message } from 'antd';
 import axios from 'axios';
 const instance = axios.create({
-  baseURL: process.env.BASE_URL || 'http://localhost:9009'
+  baseURL: process.env.BASE_URL || 'https://api.bugloft.com'
  // withCredentials: true,
   // timeout: 1000
 });
