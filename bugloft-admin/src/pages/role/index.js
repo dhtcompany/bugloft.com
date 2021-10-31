@@ -45,9 +45,8 @@ class Role extends PureComponent {
       visible: modalVisible,
       maskClosable: false,
       confirmLoading: loading.effects[`role/${modalType}`],
-      title: `${
-        modalType === 'create' ? i18n.t`Create Role` : i18n.t`Update Role`
-      }`,
+      title: `${modalType === 'create' ? i18n.t`Create Role` : i18n.t`Update Role`
+        }`,
       centered: true,
       onOk(data) {
         dispatch({

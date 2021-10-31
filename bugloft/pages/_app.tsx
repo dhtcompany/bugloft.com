@@ -14,6 +14,11 @@ import createStore from '../redux/store';
 type NextContext = NextJSContext & AppProps & {}
 
 const NextApp: NextPage<NextContext> = (props) => {
+  const gtagUrl = 'https://www.googletagmanager.com/gtag/js?id=G-Y0ZH6GFD82';
+  const gtagContent = `window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date()); 
+  gtag('config', 'G-Y0ZH6GFD82');`
 
   const { Component, pageProps, store } = props;
   return (
@@ -40,6 +45,14 @@ const NextApp: NextPage<NextContext> = (props) => {
           <meta property="twitter:title" content="Bugloft - Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống" />
           <meta property="twitter:description" content="Diễn đàn đánh giá, chia sẻ trải nghiệm đối với mọi thứ trong cuộc sống: văn hóa, kinh tế, sản phẩm, công nghệ, loại hình giải trí ... Đánh giá khách quan nhằm hổ trợ người dùng thông tin trc khi tiếp cận thực tế." />
           <meta property="twitter:image" content="https://bugloft.com/images/imgsseo.jpg" />
+
+          {/* dynamic gtag */}
+          <script async src={gtagUrl}></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `${gtagContent}`
+            }}
+          />
         </Head>
         <PageSeo />
         <NoLayout>

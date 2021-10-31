@@ -41,6 +41,7 @@ const TopicEdit: NextPage<TopicEditProps> = (props) => {
   const handleEditorChange = (e: any) => {
     setContent(e)
   }
+
   const { channelList } = props;
   return (
     <div className='main-inside-container'>
@@ -57,14 +58,14 @@ const TopicEdit: NextPage<TopicEditProps> = (props) => {
         </Breadcrumb.Item>
       </Breadcrumb>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Form 
-          onFinish={handleSubmit} 
+        <Form layout="vertical"
+          onFinish={handleSubmit}
           form={form}
           className='editer-container'>
           <Form.Item
             label='Topic title'
             name='topicTitle'
-            rules={[{ required: true, message: 'Please enter a title!!' }]}>
+            rules={[{ required: true, message: 'Please enter a title!' }]}>
             <Input
               placeholder='title'
             />
@@ -91,7 +92,14 @@ const TopicEdit: NextPage<TopicEditProps> = (props) => {
             />
           </Form.Item>
           <Form.Item>
-            <Button type='primary' htmlType='submit' className='login-form-button'>It's done!</Button>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <Button style={{ width: '200px' }} type='primary' htmlType='submit'
+                className='login-form-button'>It's done!</Button>
+            </div>
           </Form.Item>
         </Form>
       </div>

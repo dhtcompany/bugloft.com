@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c1ad926ca9ac4259cc314f524ec9a50b.js"
+  "/precache-manifest.b7418084ddedcd97ec0203b2af1ffb06.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "bugloft-admin"});

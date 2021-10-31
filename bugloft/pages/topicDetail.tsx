@@ -4,17 +4,17 @@ import { NextJSContext } from 'next-redux-wrapper';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import {
   EmailIcon, EmailShareButton, FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WeiboIcon, WeiboShareButton
 } from "react-share";
 import { Topic, User } from '../@types';
-import { actionFavoriteTopic, actionPraise, fetchPraiseInfo, fetchTopicList, getFavoriteTopic } from '../api';
+import { actionFavoriteTopic, actionPraise, fetchPraiseInfo, fetchTopicList } from '../api';
 import CommentList from '../components/CommentList';
 import NoAvatar from '../components/NoAvatar';
 import { AppStateType } from '../redux/reducers';
 import timer from '../utils/timer';
-import { Helmet } from "react-helmet";
 
 interface TopicDetailProps {
   topicInfo: Topic,
@@ -29,7 +29,7 @@ const TopicDetail = (props: TopicDetailProps) => {
 
   useEffect(() => {
     handleGetPraiseInfo();
-    handleGetFavoriteInfo()
+    // handleGetFavoriteInfo()
   }, [])
 
   const getUserName = () => {
@@ -43,22 +43,21 @@ const TopicDetail = (props: TopicDetailProps) => {
     setPraiseNum(data)
   };
 
-  const handleGetFavoriteInfo = async () => {
-    if (window.localStorage.getItem('userName')) {
-      const { data } = await getFavoriteTopic({
-        userName: getUserName()
-      })
-      if (!data || !data.list.length) {
-        setIsFavorite(false)
-      }
-      data && data.list.forEach(element => {
-        if (element._id === topicInfo._id) {
-          setIsFavorite(true)
-        }
-      });
-    }
-
-  }
+  // const handleGetFavoriteInfo = async () => {
+  //   if (window.localStorage.getItem('userName')) {
+  //     const { data } = await getFavoriteTopic({
+  //       userName: getUserName()
+  //     })
+  //     if (!data || !data.list.length) {
+  //       setIsFavorite(false)
+  //     }
+  //     data && data.list.forEach(element => {
+  //       if (element._id === topicInfo._id) {
+  //         setIsFavorite(true)
+  //       }
+  //     });
+  //   } 
+  // }
 
   const handleControlPraise = async type => {
     if (!window.localStorage.getItem('userName')) {
@@ -88,14 +87,14 @@ const TopicDetail = (props: TopicDetailProps) => {
     });
     if (data.success) {
       message.success(data.message);
-      handleGetFavoriteInfo()
+      // handleGetFavoriteInfo()
     }
   }
 
 
   const renderShareContent = () => {
-    const url = 'http://www.baidu.com'
-    const title = '111'
+    const url = `https://bugloft.com/topicDetail/${topicInfo._id}`;
+    const title = topicInfo.topicTitle;
     console.log('[router]', router)
     return (
       <div>

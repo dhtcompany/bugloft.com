@@ -1,8 +1,10 @@
 const NoFooter = () => (
-  <div style={{
+  <div style={{ 
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    height: '68px'
-  }}><a href='#'>Bugloft</a> ©2021</div>
+    height: '24px',
+    marginBottom: '24px'
+  }}><a href='/'>Bugloft&nbsp;</a> © 2021</div>
 );
 export default NoFooter;
